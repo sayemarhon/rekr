@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DemoTarget
+﻿namespace DemoTarget
 {
     public class PersonWithEmail
     {

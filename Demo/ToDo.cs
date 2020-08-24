@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using System.Linq;
 using DemoSource;
-using System.Globalization;
 using DemoUtil;
 
 namespace Demo
@@ -17,6 +14,14 @@ namespace Demo
             _comparer = comparer;
         }
 
+        /// <summary>
+        /// I didn't use the provided emails collection, since I assumed that we want to assign addresses to all accounts, not just those from the list
+        /// And I don't see how using this list would be of a help with the solution below
+        /// </summary>
+        /// <param name="groups"></param>
+        /// <param name="accounts"></param>
+        /// <param name="emails"></param>
+        /// <returns>Collection of Accounts with matched person to each</returns>
         public IEnumerable<(Account, Person)> MatchPersonToAccount(
             IEnumerable<Group> groups,
             IEnumerable<Account> accounts,

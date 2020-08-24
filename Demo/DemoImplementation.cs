@@ -1,5 +1,6 @@
 ﻿using DemoSource;
 using DemoTarget;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -38,6 +39,13 @@ namespace DemoImplementation
 
             return peopleWithEmails;
         }
+
+        public static IEnumerable<IEnumerable<string>> OnlyBigCollections(List<IEnumerable<string>> toFilter)
+        {
+            Func<IEnumerable<string>, bool> predicate = list => list != null && list.Skip(5).Any();
+            return toFilter.Where(predicate);
+        }
+
 
         private static string SanitizeNameString(string name)
         {

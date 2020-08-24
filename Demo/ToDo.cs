@@ -19,7 +19,8 @@ namespace Demo
 
         public IEnumerable<(Account, Person)> MatchPersonToAccount(
             IEnumerable<Group> groups,
-            IEnumerable<Account> accounts,            IEnumerable<string> emails)
+            IEnumerable<Account> accounts,
+            IEnumerable<string> emails)
         {
             var personAccountMatches = new List<(Account, Person)>();
             var sortedAcounts = accounts.ToList();
